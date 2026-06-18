@@ -12,12 +12,11 @@
 </pre>
 
 **Production-grade containerized CLI authentication system**
-
 [![Go](https://img.shields.io/badge/Go-1.25-00ADD8?style=flat&logo=go)](https://golang.org)
 [![Docker](https://img.shields.io/badge/Docker-Distroless-2496ED?style=flat&logo=docker)](https://docker.com)
 [![SQLite](https://img.shields.io/badge/SQLite-WAL_Mode-003B57?style=flat&logo=sqlite)](https://sqlite.org)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 [![Security](https://img.shields.io/badge/Security-Argon2id-red?style=flat)](https://en.wikipedia.org/wiki/Argon2)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 
 </div>
 
