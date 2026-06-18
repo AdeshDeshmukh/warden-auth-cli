@@ -1,13 +1,17 @@
-FROM golang:1.22-alpine AS builder
+FROM golang:1.26-alpine AS builder
 
 WORKDIR /app
+
+ENV GOTOOLCHAIN=local
+ENV CGO_ENABLED=0
+ENV GOOS=linux
 
 COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux go build \
+RUN go build \
     -ldflags="-w -s" \
     -o warden ./cmd/main.go
 
