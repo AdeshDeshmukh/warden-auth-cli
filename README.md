@@ -336,7 +336,7 @@ Every authentication event writes simultaneously to the `audit_logs` SQLite tabl
 
 ### Multi-Stage Build
 
-**Stage 1 — builder** uses `golang:1.26-alpine`:
+**Stage 1 — builder** uses `golang:1.25-alpine`:
 - Downloads all Go module dependencies
 - Compiles with `CGO_ENABLED=0` for a fully static binary
 - Strips debug info with `-ldflags="-w -s"` for smaller size
