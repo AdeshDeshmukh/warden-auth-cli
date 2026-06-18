@@ -1,0 +1,23 @@
+# Binary output
+bin/
+warden
+
+# Environment variables — NEVER commit this
+.env
+
+# Runtime generated data
+data/
+logs/
+
+# Go test artifacts
+*.out
+coverage.html
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Docker override
+docker-compose.override.yml
