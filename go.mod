@@ -1,6 +1,6 @@
 module github.com/AdeshDeshmukh/warden-auth-cli
 
-go 1.26.1
+go 1.25.0
 
 require (
 	github.com/chzyer/readline v1.5.1

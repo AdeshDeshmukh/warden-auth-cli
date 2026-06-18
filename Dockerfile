@@ -21,6 +21,4 @@ WORKDIR /app
 
 COPY --from=builder /app/warden .
 
-USER nonroot:nonroot
-
 ENTRYPOINT ["/app/warden"]

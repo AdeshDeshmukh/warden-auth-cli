@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"syscall"
 
 	"github.com/AdeshDeshmukh/warden-auth-cli/internal/cli"
@@ -16,6 +17,14 @@ import (
 
 func main() {
 	cfg := config.Load()
+
+	if err := os.MkdirAll(filepath.Dir(cfg.LogPath), 0755); err != nil {
+		log.Fatalf("failed to create log directory: %v", err)
+	}
+
+	if err := os.MkdirAll(filepath.Dir(cfg.DBPath), 0755); err != nil {
+		log.Fatalf("failed to create data directory: %v", err)
+	}
 
 	appLogger, err := logger.New(cfg.LogPath)
 	if err != nil {
